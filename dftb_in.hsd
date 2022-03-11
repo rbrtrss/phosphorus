@@ -1,0 +1,30 @@
+Geometry = GenFormat { 
+    <<< "geo_end.gen" 
+} 
+ 
+Driver = ConjugateGradient{ 
+   MaxForceComponent = 1e-06 
+   MaxSteps = 1000 
+   } 
+Hamiltonian = DFTB{ 
+   KPointsAndWeights = SupercellFolding { 
+      1 0 0 
+      0 1 0 
+      0 0 1 
+      0.0 0.0 0.0 
+   } 
+   MaxAngularMomentum = { 
+      P = d 
+   } 
+   SlaterKosterFiles = Type2FileNames{ 
+      Prefix = /home/roberto/slako/matsci/matsci-0-3/ 
+      Separator = "-" 
+      Suffix = ".skf" 
+      } 
+   } 
+Options { 
+   WriteResultsTag = Yes 
+} 
+ParserOptions { 
+   IgnoreUnprocessedNodes = Yes  
+} 
