@@ -38,8 +38,8 @@ Processed input in HSD format written to 'dftb_pin.hsd'
 
 Starting initialization...
 --------------------------------------------------------------------------------
-OpenMP threads:              2
-Chosen random seed:          4640003
+OpenMP threads:              4
+Chosen random seed:          35244070
 Mode:                        Conjugate gradient relaxation
 Self consistent charges:     No
 Spin polarisation:           No
@@ -343,10 +343,11 @@ Geometry converged
 --------------------------------------------------------------------------------
 DFTB+ running times                          cpu [s]             wall clock [s]
 --------------------------------------------------------------------------------
-Pre-SCC initialisation                 +       0.06 (  1.6%)       0.04 (  1.4%)
-SCC                                    +       2.34 ( 63.3%)       1.92 ( 67.6%)
-Post-SCC processing                    +       1.30 ( 35.0%)       0.88 ( 30.9%)
+Global initialisation                  +       0.00 (  0.0%)       0.08 (  1.7%)
+Pre-SCC initialisation                 +       0.12 (  0.9%)       0.07 (  1.5%)
+SCC                                    +      11.06 ( 82.4%)       3.59 ( 76.1%)
+Post-SCC processing                    +       2.23 ( 16.6%)       0.93 ( 19.7%)
 --------------------------------------------------------------------------------
-Missing                                +       0.00 (  0.1%)       0.00 (  0.1%)
-Total                                  =       3.70 (100.0%)       2.84 (100.0%)
+Missing                                +       0.00 (  0.0%)       0.05 (  1.0%)
+Total                                  =      13.42 (100.0%)       4.72 (100.0%)
 --------------------------------------------------------------------------------

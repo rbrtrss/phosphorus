@@ -2,9 +2,13 @@ Geometry = GenFormat {
     <<< "geo_end.gen" 
 } 
  
-Driver = ConjugateGradient{ 
-   MaxForceComponent = 1e-06 
-   MaxSteps = 1000 
+Driver = GeometryOptimization{ 
+      Convergence = { 
+      LatticeOpt = Yes 
+      MaxSteps = 1000 
+      MovedAtoms = 1:-1 
+      Optimizer = LBFGS{ 
+      } 
    } 
 Hamiltonian = DFTB{ 
    KPointsAndWeights = SupercellFolding { 

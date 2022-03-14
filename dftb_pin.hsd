@@ -86,16 +86,21 @@ P
 0.000000000000000     16.568000000000001      0.000000000000000
 0.000000000000000      0.000000000000000     22.130800000000001
 }
-Driver = ConjugateGradient {
-  MaxForceComponent = 1e-06
+Driver = GeometryOptimization {
+  LatticeOpt = Yes
   MaxSteps = 1000
-  LatticeOpt = No
-  MovedAtoms = "1:-1"
-  MaxAtomStep = 0.20000000000000001
-  StepSize = 100.00000000000000
+  MovedAtoms = 1:-1
+  Optimizer = LBFGS {
+    Memory = 20
+  }
+  Convergence = {
+    Energy = 1.7976931348623157E+308
+    GradNorm = 1.7976931348623157E+308
+    GradElem = 1.0000000000000000E-004
+    DispNorm = 1.7976931348623157E+308
+    DispElem = 1.7976931348623157E+308
+  }
   OutputPrefix = "geo_end"
-  AppendGeometries = No
-  Constraints = {}
 }
 Hamiltonian = DFTB {
   KPointsAndWeights = SupercellFolding {
